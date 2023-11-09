@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "github.com/benhenryhunter/proto";
+
+
+service Streamer {
+  rpc StreamStuff(StreamStuffRequest) returns (stream StreamStuffResponse) {}
+}
+
+message StreamStuffRequest {
+  int32 id = 1;
+}
+
+message StreamStuffResponse {
+  int32 id = 1;
+}
